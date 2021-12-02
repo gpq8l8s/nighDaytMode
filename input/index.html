@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <!--<script defer src="main.js"></script>-->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,900&family=Playfair+Display:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="nav_bar">
+      <div class="title_logo">
+        <i class="material-icons">houseboat</i>
+        <span id="title_logo">Camping</span>
+      </div>
+      <ul class="nav_menu">
+        <li><a href="#">About</a></li>
+        <li><a href="#">Service</a></li>
+        <li><a href="#">Reserve</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <input
+        id="nightDayMode"
+        type="button"
+        value="night"
+        onclick="
+        const target = document.querySelector('body');
+          if(this.value === 'night'){
+            document.querySelector('body').style.backgroundColor = 'black';
+            document.querySelector('body').style.color = 'white';
+            this.value = 'day';
+
+            const menuList = document.querySelectorAll('a');
+            let i = 0;
+            while(i < menuList.length){
+              menuList[i].style.color = 'white';
+              i++;
+            }
+          }else{
+            document.querySelector('body').style.backgroundColor = 'white';
+            document.querySelector('body').style.color = 'black';
+            this.value = 'night';
+
+            const menuList = document.querySelectorAll('a');
+            let i = 0;
+            while(i < menuList.length){
+              menuList[i].style.color = 'black';
+              i++;
+            }
+          }
+        "
+      />
+    </div>
+  </body>
+</html>
