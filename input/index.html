@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
-    <!--<script defer src="main.js"></script>-->
+    <script defer src="main.js"></script>
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -33,30 +33,7 @@
         type="button"
         value="night"
         onclick="
-        const target = document.querySelector('body');
-          if(this.value === 'night'){
-            document.querySelector('body').style.backgroundColor = 'black';
-            document.querySelector('body').style.color = 'white';
-            this.value = 'day';
-
-            const menuList = document.querySelectorAll('a');
-            let i = 0;
-            while(i < menuList.length){
-              menuList[i].style.color = 'white';
-              i++;
-            }
-          }else{
-            document.querySelector('body').style.backgroundColor = 'white';
-            document.querySelector('body').style.color = 'black';
-            this.value = 'night';
-
-            const menuList = document.querySelectorAll('a');
-            let i = 0;
-            while(i < menuList.length){
-              menuList[i].style.color = 'black';
-              i++;
-            }
-          }
+        nightDayHandler(this)
         "
       />
     </div>
